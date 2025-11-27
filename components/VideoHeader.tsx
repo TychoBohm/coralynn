@@ -11,7 +11,7 @@ export default function VideoHeader({ onSkip }: { onSkip?: () => void }) {
       setFadeOut(true);
       setShowButton(false);
       onSkip?.();
-    }, 4000); // fade-out na 4 seconden
+    }, 3400); // fade-in na 3.4 seconde
 
     return () => clearTimeout(timeout);
   }, [onSkip]);
