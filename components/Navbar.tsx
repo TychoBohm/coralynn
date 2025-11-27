@@ -48,7 +48,8 @@ export default function Navbar() {
         initial={{ opacity: 0, x: -30 }}
         animate={hasLoaded ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut", delay: 3.4 }}
-        className="text-2xl font-bold tracking-wider"
+        whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+        className="text-2xl font-bold tracking-wider cursor-pointer transition-colors duration hover:text-gray-400"
         style={{ color: scrollOpacity > 0.5 ? "#000" : "#fff" }}
       >
         CORALYNN
@@ -61,9 +62,10 @@ export default function Navbar() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 3.5 }}
         className="flex gap-8 text-lg"
       >
-        <a
+        <motion.a
           href="#shop"
-          className={`hover:opacity-70 transition-opacity duration-200 relative ${
+          whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+          className={`cursor-pointer transition-all duration-200 relative inline-block hover:text-gray-400 ${
             pathname === "/" ? "font-semibold" : ""
           }`}
           style={{ color: scrollOpacity > 0.5 ? "#000" : "#fff" }}
@@ -75,10 +77,11 @@ export default function Navbar() {
               style={{ backgroundColor: scrollOpacity > 0.5 ? "#000" : "#fff" }}
             />
           )}
-        </a>
-        <a
+        </motion.a>
+        <motion.a
           href="#about"
-          className={`hover:opacity-70 transition-opacity duration-200 relative ${
+          whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+          className={`cursor-pointer transition-all duration-200 relative inline-block hover:text-gray-400 ${
             pathname === "/about" ? "font-semibold" : ""
           }`}
           style={{ color: scrollOpacity > 0.5 ? "#000" : "#fff" }}
@@ -90,10 +93,11 @@ export default function Navbar() {
               style={{ backgroundColor: scrollOpacity > 0.5 ? "#000" : "#fff" }}
             />
           )}
-        </a>
-        <a
+        </motion.a>
+        <motion.a
           href="#contact"
-          className={`hover:opacity-70 transition-opacity duration-200 relative ${
+          whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+          className={`cursor-pointer transition-all duration-200 relative inline-block hover:text-gray-400 ${
             pathname === "/contact" ? "font-semibold" : ""
           }`}
           style={{ color: scrollOpacity > 0.5 ? "#000" : "#fff" }}
@@ -105,7 +109,7 @@ export default function Navbar() {
               style={{ backgroundColor: scrollOpacity > 0.5 ? "#000" : "#fff" }}
             />
           )}
-        </a>
+        </motion.a>
       </motion.div>
 
       {/* Rechts: Webshop iconen met slide-in van rechts */}
@@ -115,42 +119,46 @@ export default function Navbar() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 3.6 }}
         className="flex gap-6 items-center"
       >
-        <button
-          className="hover:opacity-70 transition-opacity duration-200"
+        <motion.button
+          whileHover={{ scale: 1.15, transition: { duration: 0.2 } }}
+          className="cursor-pointer transition-colors duration-200 hover:text-gray-400"
           aria-label="Search"
         >
           <HiOutlineSearch
-            className="w-6 h-6"
+            className="w-6 h-6 transition-colors duration-200"
             style={{ color: scrollOpacity > 0.5 ? "#000" : "#fff" }}
           />
-        </button>
-        <button
-          className="hover:opacity-70 transition-opacity duration-200"
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.15, transition: { duration: 0.2 } }}
+          className="cursor-pointer transition-colors duration-200 hover:text-gray-400"
           aria-label="Wishlist"
         >
           <HiOutlineHeart
-            className="w-6 h-6"
+            className="w-6 h-6 transition-colors duration-200"
             style={{ color: scrollOpacity > 0.5 ? "#000" : "#fff" }}
           />
-        </button>
-        <button
-          className="hover:opacity-70 transition-opacity duration-200"
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.15, transition: { duration: 0.2 } }}
+          className="cursor-pointer transition-colors duration-200 hover:text-gray-400"
           aria-label="Profile"
         >
           <HiOutlineUser
-            className="w-6 h-6"
+            className="w-6 h-6 transition-colors duration-200"
             style={{ color: scrollOpacity > 0.5 ? "#000" : "#fff" }}
           />
-        </button>
-        <button
-          className="hover:opacity-70 transition-opacity duration-200 relative"
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.15, transition: { duration: 0.2 } }}
+          className="cursor-pointer transition-colors duration-200 hover:text-gray-400 relative"
           aria-label="Shopping Cart"
         >
           <HiOutlineShoppingBag
-            className="w-6 h-6"
+            className="w-6 h-6 transition-colors duration-200"
             style={{ color: scrollOpacity > 0.5 ? "#000" : "#fff" }}
           />
-        </button>
+        </motion.button>
       </motion.div>
     </nav>
   );
