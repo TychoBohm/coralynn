@@ -11,13 +11,14 @@ export default function HeroText({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 80 }}
-      animate={{ opacity: shouldShow ? 1 : 0, x: shouldShow ? 0 : 80 }}
+      initial={{ opacity: 0, x: -80 }}
+      animate={{ opacity: shouldShow ? 1 : 0, x: shouldShow ? 0 : -80 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
       className="max-w-xl"
     >
       <h1 className="text-5xl font-bold leading-tight">
-        Discover the Secrets of the Sea
+        Secrets of the Sea,
+        <br /> Worn by You.
       </h1>
       <p className="mt-4 text-lg opacity-80">
         Premium linen swimwear crafted for those who chase waves and wonder.

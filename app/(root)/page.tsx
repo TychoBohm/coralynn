@@ -14,7 +14,7 @@ export default function HomePage() {
     <main className="relative w-full h-screen overflow-hidden">
       <Navbar />
       <VideoHeader onSkip={() => setShowHeroText(true)} />
-      <div className="absolute inset-0 flex items-center px-10 pointer-events-none">
+      <div className="absolute inset-0 flex items-end pb-10 px-10 pointer-events-none">
         <HeroText shouldShow={showHeroText} />
       </div>
     </main>
