@@ -47,7 +47,7 @@ export default function Navbar() {
       <motion.h2
         initial={{ opacity: 0, x: -30 }}
         animate={hasLoaded ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 3.4 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
         className="text-2xl font-bold tracking-wider cursor-pointer transition-colors duration hover:text-gray-400"
         style={{ color: scrollOpacity > 0.5 ? "#000" : "#fff" }}
@@ -59,7 +59,7 @@ export default function Navbar() {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={hasLoaded ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 3.5 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         className="flex gap-8 text-lg"
       >
         <motion.a
@@ -116,7 +116,7 @@ export default function Navbar() {
       <motion.div
         initial={{ opacity: 0, x: 30 }}
         animate={hasLoaded ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 3.6 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         className="flex gap-6 items-center"
       >
         <motion.button
